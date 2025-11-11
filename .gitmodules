@@ -3,4 +3,4 @@
 	url = https://github.com/wilicc/gpu-burn.git
 [submodule "motd"]
 	path = motd
-	url = https://github.com/yboetz/motd.git
+	url = https://github.com/jackhanyuan/motd.git
