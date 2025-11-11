@@ -1,0 +1,2 @@
+username:user_group:user_passwd:/home/username:/bin/bash
+username_2:user_group:user_passwd:/home/username_2:/bin/bash
