@@ -1,6 +1,10 @@
 # linux-admin-tools
 
-个人常用的 Linux 管理脚本集合，涵盖服务器装机、批量建号、GPU 压力测试、系统巡检和挖矿排查等场景。大部分脚本需要 `sudo` 权限。
+个人常用的 Linux 管理脚本集合，涵盖服务器装机、换源、批量建号、GPU 压力测试、系统巡检和挖矿排查等场景，需要root 账户运行本脚本。
+
+```bash
+su root
+```
 
 ## 如何获取
 
@@ -9,6 +13,28 @@ git clone --recursive https://github.com/jackhanyuan/linux-admin-tools.git
 
 # 如果忘记带子模块：
 git submodule update --init --recursive
+```
+
+## 快速换源
+
+> LinuxMirrors项目官方网站 [**linuxmirrors.cn**](https://linuxmirrors.cn/)
+
+- ### GNU/Linux 更换系统软件源
+
+```bash
+bash <(curl -sSL https://linuxmirrors.cn/main.sh)
+```
+
+- ### Docker 安装与换源
+
+```bash
+bash <(curl -sSL https://linuxmirrors.cn/docker.sh)
+```
+
+- ### Docker 更换镜像加速器
+
+```bash
+bash <(curl -sSL https://linuxmirrors.cn/docker.sh) --only-registry
 ```
 
 ## 主要脚本/目录
@@ -29,7 +55,7 @@ git submodule update --init --recursive
 # 烧机 600 秒
 sudo bash gpu-burn/gpu_burn 600
 
-# 自动配置 apt 源并安装依赖
+# 自动更新 apt 源并安装常用工具
 sudo bash autorun5.0/pre.sh
 
 # 运行安装菜单
@@ -58,5 +84,6 @@ sudo bash scan_miner.sh 2
 
 ## 致谢
 
+- [LinuxMirrors](https://github.com/SuperManito/LinuxMirrors)
 - [gpu-burn](https://github.com/wilicc/gpu-burn)
 - [motd](https://github.com/yboetz/motd)
