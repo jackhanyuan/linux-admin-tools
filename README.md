@@ -53,31 +53,31 @@ bash <(curl -sSL https://linuxmirrors.cn/docker.sh) --only-registry
 
 ```bash
 # 烧机 600 秒
-sudo bash gpu-burn/gpu_burn 600
+bash gpu-burn/gpu_burn 600
 
 # 自动更新 apt 源并安装常用工具
-sudo bash autorun5.0/pre.sh
+bash autorun5.0/pre.sh
 
 # 运行安装菜单
-sudo bash autorun5.0/setup.sh
+bash autorun5.0/setup.sh
 
 # 批量创建用户
-sudo bash create_users/batch_create_users.sh create_users/user_list.txt
+bash create_users/batch_create_users.sh create_users/user_list.txt
 
 # 批量生成用户密钥并保存私钥到keys目录
-sudo bash create_users/gen_user_keys.sh create_users/user_list.txt 
+bash create_users/gen_user_keys.sh create_users/user_list.txt 
 
 # 删除指定用户
-sudo bash create_users/user_del.sh username --remove-home
+bash create_users/user_del.sh username --remove-home
 
 # 输出系统信息
 bash check_V5.sh
 
 # 格式化或挂载新磁盘
-sudo bash mount_V6.sh
+bash mount_V6.sh
 
 # 深度 2 的挖矿排查
-sudo bash scan_miner.sh 2
+bash scan_miner.sh 2
 ```
 
 更多说明见各子目录 README 或脚本开头注释。
